@@ -650,6 +650,17 @@
 
 /* main-4 */
 .main-4 {
+  padding: 100px 0;
+  padding-top: 70px;
+}
+
+.main-4 .main-4-inner {
+  width: 100%;
+}
+
+.main-4 .main-4-inner .title {
+  margin-bottom: 90px;
+  text-align: center;
 }
 
 .main-4 .main-4-inner h2 {
