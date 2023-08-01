@@ -229,6 +229,10 @@ body {
   overflow: hidden;
   align-items: center;
 }
+.header-wrap .gnb > li:hover a {
+  color: #e4007e;
+}
+
 .header-wrap .gnb > li > a {
   font-size: 21px;
   color: #fff;
