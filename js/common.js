@@ -1,5 +1,4 @@
 $(function () {
-    $(".header").load("../inc/header.html");
-    $(".footer").load("../inc/footer.html");
-
-})
+  $(".header").load("../inc/header.html");
+  $(".footer").load("../inc/footer.html");
+});

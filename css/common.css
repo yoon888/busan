@@ -33,15 +33,57 @@ body {
   position: relative;
 }
 
-.header {
-  height: 110px;
+#header {
   background-image: linear-gradient(
     90deg,
     rgba(235, 110, 165, 1) 0%,
     rgba(228, 0, 127, 1) 30%,
     rgba(96, 25, 134, 1) 70%
   );
+}
+
+.header {
+  height: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 100;
+  /* background-color: #fff;
+  color: #222; */
+}
+
+#header.active {
+  background-image: none;
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  transition: all 0.4s;
+}
+
+#header.active .info-bar li a {
+  color: #333;
+}
+
+#header.active .header-wrap .gnb li a {
+  color: #333;
+}
+
+#header.active .header-wrap .logo a {
+  display: block;
+  background-image: url("../images/main-header-logo-color.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 118px;
+  width: 100%;
+  height: 100%;
+}
+
+#header.active .header-wrap .search {
+  background-image: url(../images/main-search-bk.png);
+}
+
+#header.active .header-wrap .bar span {
+  background: #333;
 }
 
 .header-wrap {
@@ -52,15 +94,22 @@ body {
 }
 
 .logo {
-  align-items: center;
-  width: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 110px;
   padding: 14px 0;
 }
 
-.logo a img {
+.logo a {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
+  background: url("../images/header-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 118px;
 }
 
 .header-wrap .info-bar {
@@ -108,36 +157,44 @@ body {
   display: flex;
 }
 
-.header-wrap .icon .search {
-  background-image: url("../images/search.png");
+.header-wrap .search {
+  position: absolute;
+  top: 63px;
+  right: 40px;
+  background-image: url("../images/main-search-wh.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: block;
 }
 
-.header-wrap .icon .bar {
+.header-wrap .bar {
   padding-right: 20px;
-  position: relative;
-}
-
-.header-wrap .icon .bar a {
+  position: absolute;
+  top: 68px;
+  right: 0;
+  display: block;
   width: 23px;
   height: 20px;
 }
 
-.header-wrap .icon .bar span:nth-child(1) {
+.header-wrap .bar a {
+  width: 23px;
+  height: 20px;
+  display: block;
+}
+
+.header-wrap .bar span:nth-child(1) {
   position: absolute;
   content: "";
   height: 2px;
   width: 100%;
   background: #fff;
-  width: 100%;
 }
 
-.header-wrap .icon .bar span:nth-child(2) {
+.header-wrap .bar span:nth-child(2) {
   position: absolute;
   content: "";
   top: 50%;
@@ -145,50 +202,91 @@ body {
   height: 2px;
   width: 60%;
   background: #fff;
-  width: 100%;
 }
 
-.header-wrap .icon .bar span:nth-child(3) {
+.header-wrap .bar span:nth-child(3) {
   position: absolute;
   content: "";
   bottom: 0;
   height: 2px;
   width: 100%;
   background: #fff;
-  width: 100%;
 }
 
-.header-wrap .gnb {
+.header-wrap > .gnb {
   display: flex;
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50px;
+  left: calc(50% - 585px);
+  width: 1170px;
 }
 
-.header-wrap .gnb li {
-  padding: 0 80px;
-}
-.header-wrap .gnb li a {
-  white-space: nowrap;
+.header-wrap .gnb > li {
   position: relative;
+  flex: 0 0 20%;
+  max-width: 20%;
+  text-align: center;
+  overflow: hidden;
+  align-items: center;
+}
+.header-wrap .gnb > li > a {
   font-size: 21px;
   color: #fff;
   line-height: 60px;
+  display: block;
 }
 
-.header-wrap .gnb li a::after {
+.header-wrap .gnb > li > ul {
+  height: 100%;
+  padding-top: 20px;
+  margin-top: 0px;
+  padding-bottom: 20px;
+  position: relative;
+  background-color: #fff;
+
+  /* display: none; */
+}
+
+.header-wrap .gnb > li > ul::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #ddd;
+  opacity: 1;
+  transition: 10s;
+}
+
+.header-wrap .gnb > li > ul > li {
+  text-align: left;
+}
+
+.header-wrap .gnb > li > ul > li > a {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 2;
+  padding: 0 0 0 30px;
+  color: #333;
+}
+
+.header-wrap .gnb > li > ul > li > a::before {
+  content: "-";
+  padding-right: 5px;
+}
+
+.header-wrap > .gnb > li > a::after {
   position: absolute;
   content: "";
-  top: 50%;
-  transform: translateY(-50%);
-  right: -80px;
+  top: 25px;
+  right: 0;
   width: 1px;
   height: 13px;
   background-color: #ccc;
 }
 
-.header-wrap .gnb li:last-child a::after {
+.header-wrap > .gnb > li:last-child > a::after {
   display: none;
 }
 
