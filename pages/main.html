@@ -7,7 +7,13 @@
     <title>부산광역시</title>
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <script src="../script/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <script src="../js/common.js"></script>
   </head>
   <body>
@@ -435,8 +441,85 @@
           <div class="title">
             <h2>배너</h2>
           </div>
+          <div class="banners mySwiper">
+            <div class="banner swiper-wrapper">
+              <div class="banner-slide swiper-slide">
+                <a href="#x"
+                  ><img src="../images/banner-slide-01.jpg" alt=""
+                /></a>
+              </div>
+              <div class="banner-slide swiper-slide">
+                <a href="#x"
+                  ><img src="../images/banner-slide-02.jpg" alt=""
+                /></a>
+              </div>
+              <div class="banner-slide swiper-slide">
+                <a href="#x"
+                  ><img src="../images/banner-slide-01.jpg" alt=""
+                /></a>
+              </div>
+              <div class="banner-slide swiper-slide">
+                <a href="#x"
+                  ><img src="../images/banner-slide-02.jpg" alt=""
+                /></a>
+              </div>
+              <div class="banner-slide swiper-slide">
+                <a href="#x"
+                  ><img src="../images/banner-slide-01.jpg" alt=""
+                /></a>
+              </div>
+              <div class="banner-slide swiper-slide">
+                <a href="#x"
+                  ><img src="../images/banner-slide-02.jpg" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="banner-button-next"></div>
+            <div class="banner-button-prev"></div>
+            <div class="banner-pagination"></div>
+          </div>
+          <div class="banner-link">
+            <a href="#x" class="active">
+              <span>부산시 알림배너</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
+    <div class="footer"></div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 1,
+        speed: 1000,
+        breakpoints: {
+          1024: {
+            effect: "coverflow",
+            grabCursor: true,
+            spaceBetween: -600,
+            loop: false,
+            initialSlide: 1,
+            centeredSlides: true,
+            slidesPerView: "auto",
+          },
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        keyboard: {
+          enabled: true,
+        },
+        pagination: {
+          el: ".banner-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".banner-button-next",
+          prevEl: ".banner-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
