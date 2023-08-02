@@ -293,7 +293,43 @@
             <a href="#x">RSS</a>
           </div>
 
-          <div class="pageSatisfy"></div>
+          <div class="pageSatisfy">
+            <form id="satisfy" method="post">
+              <section class="article">
+                <header>
+                  <p>이 페이지에서 제공하는 정보에 만족하십니까?</p>
+                  <div class="point">
+                    <span>평균: 4 점</span>
+                    <span>참여: 260 명</span>
+                  </div>
+                </header>
+                <div class="satisfyInner">
+                  <div class="value">
+                    <input
+                      id="sore1"
+                      name="score"
+                      type="radio"
+                      value="5"
+                      checked="checked"
+                    />
+                    <label for="score1">매우만족</label>
+                    <input id="sore2" name="score" type="radio" value="4" />
+                    <label for="score2">만족</label>
+                    <input id="sore3" name="score" type="radio" value="3" />
+                    <label for="score3">보통</label>
+                    <input id="sore4" name="score" type="radio" value="2" />
+                    <label for="score4">불만</label>
+                    <input id="sore5" name="score" type="radio" value="1" />
+                    <label for="score5">매우불만</label>
+                  </div>
+
+                  <div class="comment">
+                    <input type="button" value="평점주기" class="button" />
+                  </div>
+                </div>
+              </section>
+            </form>
+          </div>
         </div>
       </div>
     </div>
