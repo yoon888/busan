@@ -502,3 +502,7 @@ tbody {
   color: #fff;
   border: none;
 }
+
+.notice-box {
+  border: 2px solid #ddd;
+}
