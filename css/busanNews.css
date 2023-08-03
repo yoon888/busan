@@ -505,4 +505,271 @@ tbody {
 
 .notice-box {
   border: 2px solid #ddd;
+  background: #f5f5f5;
+  margin: 20px 0;
+  padding: 23px 35px;
+}
+
+.notice-box span {
+  font-weight: bold;
+}
+
+.notice-box span a {
+}
+
+.notice-box span a img {
+  border: none;
+  display: initial;
+}
+
+.notice-box > p:first-child {
+  margin-bottom: 20px;
+}
+
+.sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sns .snsLogin {
+  max-width: none;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.sns .snsLogin li {
+  height: 30px;
+  width: 30px;
+  margin-right: 6px;
+  margin-bottom: 5px;
+}
+
+.sns .snsLogin li button {
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: 1px solid #dedede;
+  background-color: #fff;
+}
+
+.sns .snsLogin li button i {
+  display: block;
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+.sns .snsLogin li button i.kakao {
+  background-image: url(../images/sns-icon.png);
+  background-position: -489px -210px;
+  width: 30px;
+  height: 30px;
+}
+
+.sns .snsLogin li button i.naver {
+  background-image: url(../images/sns-icon.png);
+  background-position: 0px -483px;
+  width: 30px;
+  height: 30px;
+}
+.sns .snsLogin li button i.facebook {
+  background-image: url(../images/sns-icon.png);
+  background-position: -489px -140px;
+  width: 30px;
+  height: 30px;
+}
+.sns .snsLogin li button i.twitter {
+  background-image: url(../images/sns-icon.png);
+  background-position: -140px -483px;
+  width: 30px;
+  height: 30px;
+}
+.sns .snsLogin li button i.google {
+  background-image: url(../images/sns-icon.png);
+  background-position: -489px -175px;
+  width: 30px;
+  height: 30px;
+}
+
+.sns .liveRe {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.sns .liveRe > span {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 10px;
+  color: #999999;
+}
+
+.sns .liveRe > a {
+  background-image: url("../images/sns-icon.png");
+  background-position: -284px -518px;
+  width: 60px;
+  height: 11px;
+  text-indent: -9999px;
+}
+
+.reply {
+  margin-bottom: 10px;
+  border-width: 1px;
+  border-color: #dedede;
+  border: 2px solid #dddddb;
+  padding: 0px 0px;
+  background: #fff;
+}
+
+.reply .top::after {
+  content: ".";
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.reply #reply-content {
+  width: 100%;
+  height: 38px;
+  min-height: 38px;
+  padding: 12px 8px;
+  font-size: 14px;
+  line-height: 24px;
+  outline: none;
+  background: transparent;
+  color: #444444;
+}
+
+textarea {
+  border: none;
+  overflow: hidden;
+  resize: none;
+}
+
+.reply .top .middle {
+  margin-bottom: 5px;
+}
+
+.reply .bottom {
+  border-color: rgba(221, 221, 219, 0.6);
+  width: 100%;
+  border-top: 1px solid rgba(221, 221, 219, 0.6);
+  display: flex;
+  justify-content: space-between;
+}
+
+.reply .bottom .smile {
+  height: 26px;
+  padding: 4px;
+  padding-right: 2px;
+}
+
+.reply .bottom .smile > button {
+  background-image: url(../images/sns-icon.png);
+  background-position: -653px -31px;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: #fff;
+}
+
+.reply .btn {
+  display: block;
+  position: relative;
+  padding: 4px;
+  padding-right: 2px;
+}
+
+.reply .btn .i-btn {
+  height: 26px;
+
+  border: none;
+  background-color: #fff;
+}
+
+.reply .btn .i-btn i {
+  display: block;
+  background-image: url(../images/sns-icon.png);
+  background-position: -372px -572px;
+  width: 26px;
+  height: 26px;
+}
+
+.reply .btn .red-btn {
+  position: relative;
+  display: inline-block;
+  top: -1px;
+  left: 1px;
+}
+
+.reply .btn .red-btn > .button {
+  width: 90px;
+  height: 36px;
+  margin: 0;
+  background-color: #d60036;
+  color: #fff;
+  border: none;
+}
+/* .reply-count {
+  margin: 20px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reply-count > .left {
+  color: #75746f;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 16px;
+}
+
+.reply-count > .left > p > span {
+  color: #d60036;
+  font-size: 16px;
+}
+
+.reply-count .sort {
+  display: flex;
+}
+
+.reply-count .sort button {
+  margin-left: 10px;
+  border: none;
+  background: none;
+}
+
+.reply-count .sort span.active {
+  color: #d60036;
+  text-decoration: underline;
+} */
+
+.no-reply {
+  width: 100%;
+  background: none;
+  margin-top: 20px;
+}
+
+.no-reply-top {
+  width: 100%;
+}
+
+.no-reply-img {
+  background: url(../images/img_NoReply.png) no-repeat 0px 0px;
+  height: 40px;
+  width: 100%;
+  background-position: center;
+  display: block;
+}
+
+.no-reply-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.no-reply-bottom span {
+  font-size: 14px;
+  color: #757575;
+  line-height: 18px;
 }
