@@ -225,7 +225,7 @@
 }
 
 .sideNav .side-menu li ul {
-  display: none;
+  display: block;
   position: relative;
   padding: 7px 5px 13px;
   overflow: hidden;
