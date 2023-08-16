@@ -56,7 +56,6 @@ body {
   background-image: none;
   background-color: #fff;
   border-bottom: 1px solid #f1f1f1;
-  transition: all 0.4s;
 }
 
 .header.active .info-bar li a {
