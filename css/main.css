@@ -141,10 +141,27 @@
   margin-bottom: 20px;
   flex: 0 0 23%;
   cursor: pointer;
-  /* background-color: #fff; */
+  opacity: 1;
 }
 
-/* .main-01-banner .banner-01::before {
+.main-01-banner .banner-01 {
+  background-color: rgba(251, 251, 251, 1);
+}
+
+/* .banner-01-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-01-1::before {
   content: "";
   position: absolute;
   top: calc(50% - 300px);
@@ -156,9 +173,14 @@
   animation: 3s ease infinite;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-} */
+}
 
-/* .main-01-banner .banner-01:hover .banner-01::before {
+.banner-01:hover .banner-01-1 {
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+}
+
+.banner-01:hover .banner-01-1::before {
   opacity: 1;
 } */
 
@@ -176,10 +198,10 @@
   background-clip: padding-box; */
 }
 
-.main-01-banner .banner-01:hover .banner-01::before {
+/* .main-01-banner .banner-01:hover .banner-01::before {
   top: 3px;
   left: 3px;
-}
+} */
 .main-01-banner .banner-02 {
   transition-delay: 0.15s;
 }
@@ -430,6 +452,10 @@
   position: relative;
 }
 
+.icons-menu li:hover a .img {
+  transform: rotateY(360deg);
+}
+
 .icons-menu li a {
   height: 90px;
   display: block;
@@ -440,6 +466,7 @@
   width: 100%;
   height: 100%;
   background-position: 50% 0;
+  transition: 1s;
 }
 
 .icons-menu li:nth-child(1) .img {
@@ -537,6 +564,13 @@
   align-items: center;
   border: 1px solid #222;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+.inform-list .btn:hover {
+  background: #222;
+  border-color: #222;
+  color: #fff;
 }
 
 .inform-list .btn p {
@@ -561,6 +595,17 @@
   background: #000;
 }
 
+.inform-list .btn:hover i::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 1px;
+  background: #fff;
+}
+
 .inform-list .btn i::after {
   position: absolute;
   content: "";
@@ -570,6 +615,17 @@
   width: 8px;
   height: 1px;
   background: #000;
+}
+
+.inform-list .btn:hover i::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 8px;
+  height: 1px;
+  background: #fff;
 }
 
 .main-2 .content-01 .contentsbox {
@@ -699,11 +755,21 @@
   background-color: #fff;
 }
 
+.main-3-contents .left .social-group li:nth-child(11) a span {
+  margin-left: 10px;
+}
+
 .main-3-contents .left .social-group li:hover a {
   background-color: #222;
   color: #fff;
 }
-.main-3-contents .left .social-group li:hover a::before {
+.main-3-contents .left .social-group li:nth-child(1):hover a::before,
+.main-3-contents .left .social-group li:nth-child(2):hover a::before,
+.main-3-contents .left .social-group li:nth-child(3):hover a::before,
+.main-3-contents .left .social-group li:nth-child(5):hover a::before,
+.main-3-contents .left .social-group li:nth-child(6):hover a::before,
+.main-3-contents .left .social-group li:nth-child(7):hover a::before,
+.main-3-contents .left .social-group li:nth-child(1):hover a::before {
   filter: invert(1);
 }
 
@@ -735,6 +801,10 @@
   background-image: url("../images/main-03-social-04.svg");
   background-size: 30px;
 }
+.main-3-contents .left .social-group li:nth-child(4):hover a::before {
+  background-image: url("../images/ico_youtube_w.svg");
+}
+
 .main-3-contents .left .social-group li:nth-child(5) a::before {
   background-image: url("../images/main-03-social-05.svg");
 }
@@ -755,6 +825,10 @@
   background-image: url("../images/main-03-social-06.svg");
   background-size: 24px;
 }
+.main-3-contents .left .social-group li:nth-child(8):hover a::before {
+  background-image: url("../images/ico_expo2030_w.svg");
+  background-size: 48px;
+}
 .main-3-contents .left .social-group li:nth-child(9) a::before {
   background-image: url("../images/main-03-social-07.svg");
   left: 8%;
@@ -764,10 +838,16 @@
 .main-3-contents .left .social-group li:nth-child(10) a::before {
   background-image: url("../images/main-03-social-08.svg");
 }
+.main-3-contents .left .social-group li:nth-child(10):hover a::before {
+  background-image: url("../images/ico_graph_w.svg");
+}
 .main-3-contents .left .social-group li:nth-child(11) a::before {
   background-image: url("../images/main-03-social-09.svg");
   background-size: 40px;
   width: 40px;
+}
+.main-3-contents .left .social-group li:nth-child(11):hover a::before {
+  background-image: url("../images/icon_10_hover.svg");
 }
 
 .main-3-contents .left .social-group li:nth-child(12) a {
@@ -787,6 +867,10 @@
   color: #0086ce;
 }
 
+.main-3-contents .left .social-group li:nth-child(12):hover a b {
+  color: #fff;
+}
+
 .main-3-contents .left .social-group li:nth-child(13) a::before {
   width: 0;
   height: 0;
@@ -801,6 +885,10 @@
   height: 20px;
   padding-left: 73px;
   line-height: 20px;
+}
+
+.main-3-contents .left .social-group li:nth-child(13):hover a span {
+  background-image: url(../images/media-hub-eng_w.svg);
 }
 
 .main-3-contents .left .social-group li:nth-child(14) a::before {
@@ -819,6 +907,10 @@
   color: #0086ce;
   padding-top: 4px;
   font-weight: bold;
+}
+
+.main-3-contents .left .social-group li:nth-child(14):hover a span b {
+  color: #fff;
 }
 
 .main-3-contents .left .social-group li a i {
@@ -875,7 +967,7 @@
 }
 
 .main-3-contents .right .banners .banner:hover {
-  background-color: #e4007e;
+  background: #e4007e;
   margin-top: -10px;
   box-shadow: 20px 20px 10px 1px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
@@ -887,7 +979,7 @@
 }
 
 .main-3-contents .right .banners .banner:hover a .img {
-  background-image: none;
+  opacity: 0;
 }
 
 .main-3-contents .right .banners .banner:nth-child(2) {
@@ -927,10 +1019,27 @@
   left: 0;
   width: 100%;
   height: 255px;
-  background-image: url("../images/main-03-banner-01.jpg");
+  opacity: 1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.main-3-contents .right .banners .banner:nth-child(1) a .img {
+  background-image: url("../images/main-03-banner-01.jpg");
+}
+
+.main-3-contents .right .banners .banner:nth-child(2) a .img {
+  background-image: url("../images/main-03-banner-02.jpg");
+}
+
+.main-3-contents .right .banners .banner:nth-child(3) a .img {
+  background-image: url("../images/main-03-banner-03.jpg");
+  height: 100%;
+}
+.main-3-contents .right .banners .banner:nth-child(4) a .img {
+  background-image: url("../images/main-03-banner-04.jpg");
+  height: 100%;
 }
 
 /* main-4 */

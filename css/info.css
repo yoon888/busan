@@ -225,7 +225,7 @@
 }
 
 .sideNav .side-menu li ul {
-  display: block;
+  display: none;
   position: relative;
   padding: 7px 5px 13px;
   overflow: hidden;
@@ -323,7 +323,6 @@
   width: 60%;
   display: flex;
   gap: 4px;
-
 }
 
 .board-search .board-contents .title-search .c_title {
@@ -364,7 +363,7 @@
   content: "";
   width: 19px;
   height: 18px;
-  background: url("../images/sp_ico_btn.png")no-repeat 0 -66px;
+  background: url("../images/sp_ico_btn.png") no-repeat 0 -66px;
   display: inline-block;
   margin-right: 4px;
 }

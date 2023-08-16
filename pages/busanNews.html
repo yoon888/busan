@@ -39,7 +39,7 @@
             <li>
               <a href="#x">새소식</a>
               <button class="side-menu-btn"></button>
-              <ul>
+              <ul class="side-menu-ul">
                 <li><a href="#x" class="active">통합 공지사항</a></li>
                 <li><a href="#x">홍보게시판</a></li>
                 <li>
@@ -56,11 +56,14 @@
             </li>
             <li>
               <a href="#x">부산시보</a>
+              <ul class="side-menu-ul">
+                <li></li>
+              </ul>
             </li>
             <li>
               <a href="#x">보도·해명자료</a>
               <button class="side-menu-btn"></button>
-              <ul>
+              <ul class="side-menu-ul">
                 <li><a href="#x">보도자료</a></li>
                 <li><a href="#x">해명·설명자료</a></li>
               </ul>
@@ -68,7 +71,7 @@
             <li>
               <a href="#x">공고</a>
               <button class="side-menu-btn"></button>
-              <ul>
+              <ul class="side-menu-ul">
                 <li><a href="#x">채용공고</a></li>
                 <li><a href="#x" class="jump">공무원 시험공고</a></li>
                 <li><a href="#x">입찰공고</a></li>
@@ -78,11 +81,16 @@
                 <li><a href="#x">분묘개장공고</a></li>
               </ul>
             </li>
-            <li><a href="#x">부산시 공식SNS</a></li>
+            <li>
+              <a href="#x">부산시 공식SNS</a>
+              <ul class="side-menu-ul">
+                <li></li>
+              </ul>
+            </li>
             <li>
               <a href="#x">시정사진</a>
               <button class="side-menu-btn"></button>
-              <ul>
+              <ul class="side-menu-ul">
                 <li><a href="#x">시정관련(보도자료) 사진자료</a></li>
                 <li><a href="#x">테마 갤러리</a></li>
                 <li><a href="#x">상징</a></li>
@@ -94,49 +102,60 @@
         <div class="contents">
           <h3>통합 공지사항</h3>
           <div class="board-search">
-              <div class="board-title">
-                <span>검색</span>
-              </div>
-              <div class="board-contents">
-                <span class="date">
-                  <label for="srchBeginDt" class="hidden">검색 시작일</label>
-                  <input
-                    type="text"
-                    id="srchBeginDt"
-                    name="srchBeginDt"
-                    placeholder="검색시작일"
-                    title="YYYY-MM-DD 형식으로 날짜를 입력해주세요"
-                    value="2022-08-02"
-                  />
-                  <button>
-                    <img src="../images/ico_calender.png" alt="" />
-                  </button>
-                  <span class="hiphen">-</span>
-                  <label for="srchEndDt" class="hidden">검색 종료일</label>
-                  <input
-                    type="text"
-                    id="srchEndDt"
-                    name="srchEndDt"
-                    placeholder="검색종료일"
-                    title="YYYY-MM-DD 형식으로 날짜를 입력해주세요"
-                    value="2023-08-02"
-                  />
-                  <button>
-                    <img src="../images/ico_calender.png" alt="" />
-                  </button>
-                </span>
-                <span class="title-search">
-                  <select name="c_title" class="c_title" id="c_title" style="width:18%; min-width:80px;">
-                    <option value="sj">제목</option>
-                    <option value="sj">내용</option>
-                    <option value="sj">작성자</option>
-                  </select>
-                  <input type="search" name="c_search" class="c_search" style="width:60%;" placeholder="검색">
-                  <button class="c_search_btn" style="width:18%">
-                    <span>검색</span>
-                  </button>
-                </span>
-              </div>
+            <div class="board-title">
+              <span>검색</span>
+            </div>
+            <div class="board-contents">
+              <span class="date">
+                <label for="srchBeginDt" class="hidden">검색 시작일</label>
+                <input
+                  type="text"
+                  id="srchBeginDt"
+                  name="srchBeginDt"
+                  placeholder="검색시작일"
+                  title="YYYY-MM-DD 형식으로 날짜를 입력해주세요"
+                  value="2022-08-02"
+                />
+                <button>
+                  <img src="../images/ico_calender.png" alt="" />
+                </button>
+                <span class="hiphen">-</span>
+                <label for="srchEndDt" class="hidden">검색 종료일</label>
+                <input
+                  type="text"
+                  id="srchEndDt"
+                  name="srchEndDt"
+                  placeholder="검색종료일"
+                  title="YYYY-MM-DD 형식으로 날짜를 입력해주세요"
+                  value="2023-08-02"
+                />
+                <button>
+                  <img src="../images/ico_calender.png" alt="" />
+                </button>
+              </span>
+              <span class="title-search">
+                <select
+                  name="c_title"
+                  class="c_title"
+                  id="c_title"
+                  style="width: 18%; min-width: 80px"
+                >
+                  <option value="sj">제목</option>
+                  <option value="sj">내용</option>
+                  <option value="sj">작성자</option>
+                </select>
+                <input
+                  type="search"
+                  name="c_search"
+                  class="c_search"
+                  style="width: 60%"
+                  placeholder="검색"
+                />
+                <button class="c_search_btn" style="width: 18%">
+                  <span>검색</span>
+                </button>
+              </span>
+            </div>
           </div>
           <div class="boardTxt">
             <p>총 <span>2631</span>건 (<span>2</span>/263page)</p>
@@ -448,15 +467,13 @@
     <div class="footer"></div>
 
     <script>
-      $('.sideNav .side-menu > li').click(
-        function(){
-        $('.sideNav .side-menu li ul ').stop().slideDown().css('display','block')
-      })
-      // $('.sideNav .side-menu > li').click(
-      //   function(){
-      //   $('.sideNav .side-menu li ul ').stop().slideUp().css('display','none')
-      // })
+      $(".sideNav .side-menu > li").click(function () {
+        $(this).find(".side-menu-ul").stop().slideDown();
+        $(".side-menu-ul").hide();
 
+        var sideMenuUl = $(this).index();
+        $(".side-menu-ul").eq(sideMenuUl).show(sideMenuUl);
+      });
     </script>
   </body>
 </html>
