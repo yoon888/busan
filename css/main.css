@@ -273,6 +273,10 @@
   background-position: center;
 }
 
+.main-01-banner .banner-01-list li:hover a {
+  background-color: #e4007e;
+}
+
 .main-01-banner .banner-01 .banner-01-list li:nth-child(1) a {
   background-image: url("../images/banner-01-list01.svg");
 }
@@ -368,29 +372,52 @@
   background-color: #fff;
 }
 
+.banner-03 .bgimg .left li:hover a {
+  background-color: #e4007e;
+  border: 1px solid #e4007e;
+}
+
 .banner-03 .bgimg .left li:nth-child(1) a {
   background-image: url("../images/ico_dabom.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;
 }
+.banner-03 .bgimg .left li:nth-child(1):hover a {
+  background-image: url("../images/ico_dabom_white.png");
+}
+
 .banner-03 .bgimg .left li:nth-child(2) a {
   background-image: url("../images/ico_visitbusan.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
 }
+
+.banner-03 .bgimg .left li:nth-child(2):hover a {
+  background-image: url("../images/ico_visitbusan_white.png");
+}
+
 .banner-03 .bgimg .left li:nth-child(3) a {
   background-image: url("../images/ico_galmaet.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
 }
+
+.banner-03 .bgimg .left li:nth-child(3):hover a {
+  background-image: url("../images/ico_galmaet_white.png");
+}
+
 .banner-03 .bgimg .left li:nth-child(4) a {
   background-image: url("../images/ico_medicalbusan.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
+}
+
+.banner-03 .bgimg .left li:nth-child(4):hover a {
+  background-image: url("../images/ico_medicalbusan_white.png");
 }
 
 .banner-04 {
