@@ -290,6 +290,19 @@
   background-image: url("../images/banner-01-list04.svg");
 }
 
+.main-01-banner .banner-01 .banner-01-list li:hover:nth-child(1) a {
+  background-image: url("../images/busan_news_icon_kor_w.svg");
+}
+.main-01-banner .banner-01 .banner-01-list li:hover:nth-child(2) a {
+  background-image: url("../images/busan_news_icon_eng_w.svg");
+}
+.main-01-banner .banner-01 .banner-01-list li:hover:nth-child(3) a {
+  background-image: url("../images/busan_news_icon_jpn_w.svg");
+}
+.main-01-banner .banner-01 .banner-01-list li:hover:nth-child(4) a {
+  background-image: url("../images/busan_news_icon_cn_w.svg");
+}
+
 .main-01-banner .banner-02 i.cal {
   background-image: url("../images/ico_calender.svg");
   background-position: center;
